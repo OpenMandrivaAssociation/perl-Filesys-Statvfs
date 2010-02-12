@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	%mkrel 1
+Release:	%mkrel 2
 
 Summary:	Interface between Perl and the statvfs() system call
 License:	GPL+ or Artistic
@@ -13,6 +13,7 @@ Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Filesys/%{upstream_name}-
 
 BuildRequires:	perl-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+
 Obsoletes: perl-Filesys-Statvfs_Statfs_Df <= 0.79
 Provides:  perl-Filesys-Statvfs_Statfs_Df = %{version}-%{release}
 
@@ -42,4 +43,3 @@ rm -rf %{buildroot}
 %{_mandir}/*/*
 %{perl_vendorlib}/*/Filesys
 %{perl_vendorlib}/*/auto/Filesys
-
